@@ -1,14 +1,25 @@
 {
   "manifest_version": 3,
   "name": "Site Guard",
-  "version": "1.0",
-
-  "action": {
-    "default_title" : "Save you URL",
-    "default_popup" : "popup.html"
-  },
-  "description": "Save you URL",
+  "version": "0.1",
+  "description": "Save you URL. V0.1",
   "icons": {
     "128" : "icon.ico"
-  }
+  },
+  "action": {
+    "default_title" : "Save you URL"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "activeTab", "scripting", "storage"
+  ],
+
+  "host_permissions": [
+    "*://*/*"
+  ]
+
 }
